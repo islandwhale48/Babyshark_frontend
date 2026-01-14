@@ -19,14 +19,16 @@ export default function AIGenerator() {
     setError("");
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/generate`
-, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ idea })
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/generate`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ idea })
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to generate plan");
@@ -36,6 +38,7 @@ export default function AIGenerator() {
       setAiResponse(data);
 
     } catch (err) {
+      console.error(err);
       setError("AI generation failed. Please try again.");
     }
 
@@ -55,7 +58,7 @@ export default function AIGenerator() {
       <textarea
         value={idea}
         onChange={(e) => setIdea(e.target.value)}
-        placeholder="Example: Momo stall near CUSAT for students"
+        placeholder="Example: Momo stall near college"
         rows={4}
         style={{
           width: "100%",
@@ -86,7 +89,6 @@ export default function AIGenerator() {
         {loading ? "Generating..." : "Generate Plan"}
       </button>
 
-      {/* Preview + Continue */}
       {aiResponse && (
         <div style={{ marginTop: "40px" }}>
           <h3>AI Generated Preview</h3>
@@ -100,7 +102,7 @@ export default function AIGenerator() {
               marginTop: "10px"
             }}
           >
-            {/* {aiResponse.text} */}
+{JSON.stringify(aiResponse, null, 2)}
           </pre>
 
           <button
