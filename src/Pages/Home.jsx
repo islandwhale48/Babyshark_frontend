@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
-
+import MainLayout from "../Layout/MainLayout";
 export default function Home() {
   const navigate = useNavigate();
 
   return (
     <div style={{ padding: 40 }}>
+         <MainLayout/>
       <h1>What brings you here today?</h1>
 
       <div style={{ display: "flex", gap: 20, marginTop: 30 }}>

@@ -1,10 +1,12 @@
 import { useNavigate } from "react-router-dom";
-
+import MainLayout from "../Layout/MainLayout";
 export default function Dashboard() {
   const navigate = useNavigate();
 
   return (
     <div style={{ padding: 40 }}>
+        <MainLayout/>
+
       <h1>Your Startup Workspace</h1>
 
       <div style={{ display: "grid", gap: 15, marginTop: 20 }}>

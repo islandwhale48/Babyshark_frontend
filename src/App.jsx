@@ -9,6 +9,7 @@ import Pitch from "./Pages/Project/Pitch";
 import Licenses from "./Pages/Project/Licenses";
 import Progress from "./Pages/Project/Progress";
 import Planner from "./Pages/Project/Planner";
+import Explore from "./Pages/Explore";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/licenses" element={<Licenses />} />
         <Route path="/progress" element={<Progress />} />
         <Route path="/planner" element={<Planner />} />
+        <Route path="/explore" element={<Explore/>} />
       </Routes>
     </BrowserRouter>
   );
