@@ -31,13 +31,13 @@ export default function MainLayout() {
           </button>
 
           <button
-            onClick={() => navigate("/dashboard")}
+            onClick={() => navigate("/")}
             style={{
               ...navBtn,
-              ...(isActive("/dashboard") ? activeBtn : {})
+              ...(isActive("/") ? activeBtn : {})
             }}
           >
-            Dashboard
+            Home
           </button>
         </div>
       </div>

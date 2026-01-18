@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import MainLayout from "../Layout/MainLayout";
 export default function AIGenerator() {
   const [idea, setIdea] = useState("");
   const [loading, setLoading] = useState(false);
@@ -55,6 +55,7 @@ export default function AIGenerator() {
 
   return (
     <div style={{ padding: 40 }}>
+       <MainLayout/>
       <h1>Describe your startup idea</h1>
 
       <textarea
