@@ -1,3 +1,37 @@
+// You are a startup mentor.
+// Analyze the feasibility of this startup idea.
+
+// Startup Idea: {{idea}}
+// Target Audience: {{audience}}
+// Location: {{location}}
+
+// Return:
+// 1. Problem statement
+// 2. Existing solutions
+// 3. Market gap
+// 4. Feasibility score (1–10)
+// import { useState } from "react";
+// import { fetchWeather } from "../api/weatherApi";
+
+// function Weather() {
+//   const [city, setCity] = useState("");
+//   const [data, setData] = useState(null);
+
+//   const handleClick = async () => {
+//     const response = await fetchWeather(city);
+//     setData(response.data);
+//   };
+
+//   return (
+//     <>
+//       <input onChange={(e) => setCity(e.target.value)} />
+//       <button onClick={handleClick}>Get Weather</button>
+
+//       {data && <p>{data.weather}</p>}
+//     </>
+//   );
+// }
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MainLayout from "../Layout/MainLayout";
